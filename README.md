@@ -5,8 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/a7med7x7/chamelab-cli)](https://github.com/a7med7x7/Chameo/releases)
 [![Demo Tutorial](https://img.shields.io/badge/demo-LLM%20Experiment-purple.svg)](https://github.com/A7med7x7/Chameo/tree/training-demo)
-
-
+[![PyPI](https://img.shields.io/pypi/v/chameo.svg)](https://pypi.org/project/chameo/)
 >[!NOTE]
 >
 > Use this template generator when you are ready to start a machine learning project on [Chameleon Cloud](https://www.chameleoncloud.org), or if you want to integrate reproducible experiment tracking into your existing project.
