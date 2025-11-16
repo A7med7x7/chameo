@@ -19,7 +19,7 @@ def cli():
 
 def create(path, template, vcs_ref):
     """
-    Create a new project from the ReproGen template.
+    Create a new project from the chameo template.
     """
     if shutil.which("copier") is None:
         click.echo("copier executable not found. Install dependencies 'pip install copier'")
