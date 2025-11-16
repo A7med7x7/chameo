@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+include = ["chameo"]
+
+[project]
+name = "chameo"
+version = "1.0.0"
+readme = "README.md"
+authors = [
+    {name = "Ahmed Alghali", email = "a7medalghali777@gmail.com"}, 
+    {name = "Mohamed Saeed", email = "mohdsaeed18x3@gmail.com"},
+    {name = "Fraid Fund", email = "ffund@nyu.edu"}
+]
+license = {file = "LICENSE"}
+description = "CLI for Chameo template generator for Creating Reproducible Machine Learning Projects on Chameleon Cloud"
+keywords = ["Chameleon Cloud", "MLOps", "MLflow", "Reproducibility"]
+dependencies = [
+    "click>=8.0",
+    "copier>=9.0"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: GPU :: NVIDIA CUDA :: 11",
+    "Environment :: GPU :: NVIDIA CUDA :: 12",
+    "Environment :: OpenStack",
+    "Framework :: Jupyter :: JupyterLab",
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS",
+    "Operating System :: Unix",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+requires-python = ">=3.9"
+
+[project.urls]
+homepage = "https://github.com/A7med7x7/Chameo"
+repository = "https://github.com/A7med7x7/Chameo"
+
+[project.scripts]
+chameo = "chameo.cli:cli"
