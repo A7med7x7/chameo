@@ -10,16 +10,19 @@ include = ["chameo"]
 name = "chameo"
 version = "1.0.0"
 readme = "README.md"
-authors = [{name="Ahmed Alghali", email="a7medalghali777@gmail.com"}, 
-            {name="Mohamed Saeed", email="mohdsaeed18x3@gmail.com"},
-            {name="Fraid Fund", email="mailto:ffund@nyu.edu"}]
-license = { file = "LICENSE" }
+authors = [
+    {name = "Ahmed Alghali", email = "a7medalghali777@gmail.com"}, 
+    {name = "Mohamed Saeed", email = "mohdsaeed18x3@gmail.com"},
+    {name = "Fraid Fund", email = "ffund@nyu.edu"}
+]
+license = {file = "LICENSE"}
 description = "CLI for Chameo template generator for Creating Reproducible Machine Learning Projects on Chameleon Cloud"
-keywords = ["Chameleon Cloud", "MLOps", "MLflow", "Reproduciblility"]
+keywords = ["Chameleon Cloud", "MLOps", "MLflow", "Reproducibility"]
 dependencies = [
     "click>=8.0",
     "copier>=9.0"
 ]
+
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: GPU :: NVIDIA CUDA :: 11",
@@ -32,10 +35,13 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python",
     "Topic :: Scientific/Engineering :: Artificial Intelligence"
-
 ]
+
 requires-python = ">=3.9"
-Homepage = "https://github.com/A7med7x7/Chameo"
+
+[project.urls]
+homepage = "https://github.com/A7med7x7/Chameo"
+repository = "https://github.com/A7med7x7/Chameo"
+
 [project.scripts]
 chameo = "chameo.cli:cli"
-project.url="add link later"
