@@ -1,0 +1,22 @@
+# include 
+include pyproject.toml
+include README.md
+include LICENSE
+
+# Include all Python files in the main package
+recursive-include chameo *.py
+
+# Exclude unnecessary files and directories
+exclude .DS_Store
+exclude .gitignore
+exclude .env
+exclude .venv
+exclude *.log
+exclude *.pyc
+exclude *.pyo
+exclude *.pyd
+exclude __pycache__/
+exclude .pytest_cache/
+exclude .mypy_cache/
+exclude .coverage
+prune template
