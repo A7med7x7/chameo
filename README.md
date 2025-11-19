@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/A7med7x7/chameo/1d394753b0179b95e64a6517a982dd1d64f3f0a3/docs/assets/chameleon_logo.png" alt="Chameo logo" width="300" />
+</p>
+
+
+
 # Chameo: A Template Generator for Reproducible Machine Learning Projects on Chameleon Cloud
 
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
