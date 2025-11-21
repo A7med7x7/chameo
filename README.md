@@ -14,7 +14,7 @@ When researchers complete their experiments, all the critical information gets a
 - Version control status
 - Environment configurations
 
-Everything needed to understand and reproduce the experiment is safely stored in persistent object storage. this setup lets you browse these experiments that were previously packaged using [ReproGen](https://github.com/A7med7x7/reprogen/tree/dev), so you can analyze results, compare different runs, and build upon existing work.
+Everything needed to understand and reproduce the experiment is safely stored in persistent object storage. this setup lets you browse these experiments that were previously packaged using [chameo](https://github.com/A7med7x7/chameo/tree/dev), so you can analyze results, compare different runs, and build upon existing work.
 
 > [!IMPORTANT]
 > **Sharing Requirements**: to view someone's experiments, the original authors need to:
@@ -59,12 +59,12 @@ Choose the correct endpoint based on where the containers are hosted:
 ## Setup Instructions
 
 > [!IMPORTANT]
-> **Run these commands on a Chameleon Cloud node** .
+> **Run these commands on a Chameleon Cloud node**.
 
-### Step 1: Clone the Repository, from your home directory
+### Step 1: Clone the Repository from your home directory
 ```bash
 cd ~
-git clone --branch mlflow-replay https://github.com/A7med7x7/ReproGen.git mlflow-read
+git clone --branch mlflow-replay https://github.com/A7med7x7/chameo.git mlflow-read
 ```
 
 ### Step 2: Generate Configuration Scripts
