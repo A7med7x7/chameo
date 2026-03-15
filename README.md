@@ -1,5 +1,5 @@
 # Geoscience-LLM-trainer
-In this tutorial, we will explore how to use the [ReproGen](https://github.com/A7med7x7/ReproGen) tool to generate a reproducible project workflow and inspect the infrastructure and platform design for large-model training. 
+In this tutorial, we will explore how to use the [Chameo](https://github.com/A7med7x7/chameo) tool to generate a reproducible project workflow and inspect the infrastructure and platform design for large-model training. 
 ### Prerequisites
 To run this experiment, you need the following:
 1. An account on [Chameleon Cloud](https://chameleoncloud.org).
@@ -12,7 +12,7 @@ We’ll proceed with the `gpu_p100` NVIDIA node at CHI@TACC (Texas Advanced Comp
 
 >[!NOTE]
 >
->feel free to create a lease first and then generate a project using ReproGen, or generate the project first and create the lease later(Ideally before fetching it), just use the same project name when creating the lease.
+>feel free to create a lease first and then generate a project using Chameo, or generate the project first and create the lease later(Ideally before fetching it), just use the same project name when creating the lease.
 
 ## Create a lease
 To use resources on the Chameleon testbed, reserve them by creating a lease. Using the Horizon OpenStack web interface, create a lease for a p100 node.
@@ -42,7 +42,7 @@ Then,
 
 ## Generating a project 
 
-We will use ReproGen to generate a project. ReproGen provides three main benefits:
+We will use Chameo to generate a project. Chameo provides three main benefits:
 1. **Managing resources**: automates cloud setup (object store containers, credentials, servers). The generated notebooks in the `chi` directory handle these steps programmatically.
 2. **Reproducible workflows**: provides a portable Dockerized environment tailored to your inputs and an MLflow server to log metrics and artifacts that will later ensure reproducibility.
 3. **Custom training code**: generates Python scripts and notebooks in `notebooks` and `src` that serve as templates you can adapt.
@@ -50,7 +50,7 @@ We will use ReproGen to generate a project. ReproGen provides three main benefit
 
 >[!NOTE]
 >
->ReproGen makes the cloud infrastructure **easy** for you, so inthe  best cases, you won't have to write or modify the Docker-Compose file, your images, or worry about how to set up the servers. The generated project handles this for you by hiding the complexity involved when setting up the environment, and lets you spin your virtual machine very quickly
+>Chameo makes the cloud infrastructure **easy** for you, so inthe  best cases, you won't have to write or modify the Docker-Compose file, your images, or worry about how to set up the servers. The generated project handles this for you by hiding the complexity involved when setting up the environment, and lets you spin your virtual machine very quickly
 
 --- 
 ### Install copier
@@ -67,7 +67,7 @@ pip install copier
 Create a new project with
 
 ```sh
-copier copy --vcs-ref main https://github.com/A7med7x7/reprogen.git misrtal-instruct 
+copier copy --vcs-ref main https://github.com/A7med7x7/chameo.git misrtal-instruct 
 ```
 
 Below are the answers to the copier prompts:
@@ -267,7 +267,7 @@ open a terminal shell from the launcher `Other -> terminal` or `file-> new launc
 
 ```sh
 cd ~/work/mistral-instruct/src 
-wget https://raw.githubusercontent.com/A7med7x7/ReproGen/training-demo/src/geoscience_mistral_lora_trainer.py
+wget https://raw.githubusercontent.com/A7med7x7/chameo/training-demo/src/geoscience_mistral_lora_trainer.py
 ```
 
 
@@ -340,7 +340,7 @@ before fine-tuning, we’ll run a notebook to check how the **base model** answe
 we will start by getting the material on our Juypter lab in the Jupyter temrinal write the commands:
 ```sh
 cd work/mistral-instruct/notebooks
-wget https://raw.githubusercontent.com/A7med7x7/ReproGen/training-demo/notebooks/1_baseline_model.ipynb 
+wget https://raw.githubusercontent.com/A7med7x7/chameo/training-demo/notebooks/1_baseline_model.ipynb 
 ```
 
 Run the cells in the notebook `1_baseline_model.ipynb`, and you’ll see the model gives answers that _sound reasonable_ but aren’t very accurate.
@@ -462,13 +462,13 @@ finally Once fine-tuned, we will test the model by plugging the adapters and and
 
 ```vb
 cd work/mistral-instruct/notebooks
-wget https://raw.githubusercontent.com/A7med7x7/ReproGen/training-demo/notebooks/2_finetuned_model.ipynb 
+wget https://raw.githubusercontent.com/A7med7x7/chameo/training-demo/notebooks/2_finetuned_model.ipynb 
 ```
 follow the notebook `2_finetuned_model.ipynb` 
 
 ###  Wrapping Up
 At this stage, you have:
-- Generated a project using ReproGen
+- Generated a project using Chameo
 - Explored the infrastructure needed for large training 
 - Fine-tuned a **Mistral model with LoRA adapters**.
 - Logged metrics, system info, and artifacts in **MLflow**, making your runs reproducible and easy to compare.
